@@ -1,0 +1,13 @@
+CREATE DATABASE IF NOT EXISTS project_db
+    CHARACTER SET utf8mb4
+    COLLATE utf8mb4_unicode_ci;
+
+USE project_db;
+
+CREATE TABLE IF NOT EXISTS employees (
+    id INT UNSIGNED NOT NULL AUTO_INCREMENT,
+    name VARCHAR(120) NOT NULL,
+    salary DECIMAL(10, 2) NOT NULL DEFAULT 0.00,
+    team VARCHAR(120) NOT NULL,
+    PRIMARY KEY (id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
